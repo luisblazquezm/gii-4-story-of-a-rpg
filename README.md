@@ -1,5 +1,3 @@
-### Story Of A RPG
-
 ## Introduction
 
 This game in 2D is based on a RPG game where the player must find 3 objects in 3 different scenarios in order to get to a final boss and defeat it. The tools and techniques shown here are used on base of what it has been learnt in class.
@@ -7,7 +5,7 @@ This game in 2D is based on a RPG game where the player must find 3 objects in 3
 ## Main Scheme
 
 * **Player**: basic sprite image player.
-![alt text](https://github.com/luisblazquezm/story-of-a-rpg/tree/master/docs/Player.png)
+![ScreenShot](https://github.com/luisblazquezm/story-of-a-rpg/tree/master/docs/Player.PNG "Optional Title")
 
 * **Scenarios**: there will be four different scenarios:
 
@@ -40,14 +38,13 @@ This game in 2D is based on a RPG game where the player must find 3 objects in 3
    
 * **Stats**:
 
-      | Weapon | Attack | Agility | Special Tip |
-      |--------------|----------|-------|-------|
-      | `ligthsaber` | 20 (+5) | (+10) | (+15) |
-      | `anduril` | 20 (+5) | (+10) | (+15) |
-      | `mjolnir` | 20 (+5) | (+10) | (+15) |
-   
-      | Tool | Strength | Speed | Special Tip |
-      |-------|----------|-------|-------|
-      | `flash speedster boots` | 20 (+5) | (+10) | (+15) |
-      | `blast cannon` | 20 (+5) | (+10) | (+15) |
+| Weapon | Attack | Agility | Special Tip |
+| --- | --- | --- | --- |
+| `ligthsaber` | 20 (+5) | (+10) | (+15) |
+| `anduril` | 20 (+5) | (+10) | (+15) |
+| `mjolnir` | 20 (+5) | (+10) | (+15) |
 
+| Tool | Strength | Speed | Special Tip |
+| --- | --- | --- | --- |
+| `flash speedster boots` | 20 (+5) | (+10) | (+15) |
+| `blast cannon` | 20 (+5) | (+10) | (+15) |
