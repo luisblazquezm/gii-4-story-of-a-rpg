@@ -5,28 +5,28 @@ This game in 2D is based on a RPG game where the player must find 3 objects in 3
 ## Main Scheme
 
 * **Player**: basic sprite image player.
-![ScreenShot](https://github.com/luisblazquezm/story-of-a-rpg/tree/master/docs/Player.PNG "Optional Title")
+![Alt Text](https://github.com/luisblazquezm/story-of-a-rpg/tree/master/docs/Player.JPG)
 
 * **Scenarios**: there will be four different scenarios:
 
-1. Main one. Basic plain field
-2. Desert
-3. Ice or Lava (depends)
-4. Final Boss Cave
+    1. Main one. Basic plain field
+    2. Desert
+    3. Ice or Lava (depends)
+    4. Final Boss Cave
 
 * **Enemies**: there will be 2 or 3 in each scenario:
 
-1. Plain field
-   * **enemy_1**:
-   * **enemy_2**:
-2. Desert
-   * **enemy_1**:
-   * **enemy_2**:
-3. Ice or Lava (depends)
-   * **enemy_1**:
-   * **enemy_2**:
-4. Final Boss Cave
-   * **Final Boos**:
+    1. Plain field
+       * **enemy_1**:
+       * **enemy_2**:
+    2. Desert
+       * **enemy_1**:
+       * **enemy_2**:
+    3. Ice or Lava (depends)
+       * **enemy_1**:
+       * **enemy_2**:
+    4. Final Boss Cave
+       * **Final Boos**:
 
 * **Tools and weapons**: each tool will give the player different habilites
    
