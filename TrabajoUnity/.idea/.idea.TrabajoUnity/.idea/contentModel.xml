@@ -8,13 +8,17 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
+          <e p="ChestBehaviour.cs" t="Include" />
+          <e p="ContextClue.cs" t="Include" />
+          <e p="Interactable.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="Sign.cs" t="Include" />
+          <e p="Signal.cs" t="Include" />
           <e p="SubzoneMove.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
-          <e p="last-guardian-sprites" t="Include">
-            <e p="readme.txt" t="Include" />
-          </e>
           <e p="LPC_weapons_pack" t="Include">
             <e p="readme.txt" t="Include" />
           </e>

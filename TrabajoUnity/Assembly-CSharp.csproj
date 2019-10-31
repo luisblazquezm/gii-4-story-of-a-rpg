@@ -58,7 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\ChestBehaviour.cs" />
+    <Compile Include="Assets\Scripts\ContextClue.cs" />
+    <Compile Include="Assets\Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sign.cs" />
+    <Compile Include="Assets\Scripts\Signal.cs" />
     <Compile Include="Assets\Scripts\SubzoneMove.cs" />
     <None Include="Assets\Sprites\LPC_weapons_pack\README.txt" />
     <None Include="Assets\Sprites\Others\FreePixelGear\ReadMe.txt" />

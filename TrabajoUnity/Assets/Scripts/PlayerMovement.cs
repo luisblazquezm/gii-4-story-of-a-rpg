@@ -2,8 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    walk,
+    attack,
+    interact,
+    idle
+}
+
 public class PlayerMovement : MonoBehaviour
 {
+    public PlayerState currentState;
     public float speed = 1.1f; // Change the speed in the interphace!!!!
     protected Transform _transform;
     protected Animator _animator;
@@ -12,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentState = PlayerState.walk;
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
         _rigidBody2D = GetComponent<Rigidbody2D>();
@@ -20,7 +30,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
+        if (currentState == PlayerState.interact)
+        {
+            return;
+        }
     }
 
     // Update is called once per frame
