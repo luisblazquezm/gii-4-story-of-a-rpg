@@ -26,10 +26,15 @@ public class ChestBehaviour : Interactable
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange && isOpen)
+        {
+            chestAlreadyOpened();
+        }
+        
         // Getkey gives problems so better getkeydown
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && !isOpen)
         {
-            Debug.Log("OLE");
+            Debug.Log("OLE2");
             if (!isOpen)
             {
                 // Open the chest
@@ -41,6 +46,7 @@ public class ChestBehaviour : Interactable
                 chestAlreadyOpened();
             }
         }
+
     }
 
     public void openChest()
@@ -61,6 +67,7 @@ public class ChestBehaviour : Interactable
         _animatorPlayer.SetBool("receive_item", true);
         _animatorChest.SetBool("openChest", true);
         receivedItemSprite.sprite = contentItem.itemSprite;
+        playerInventory.AddItem(contentItem);
             
         // Set the chest to opened
         isOpen = true;
@@ -76,6 +83,7 @@ public class ChestBehaviour : Interactable
         
         // Set the current item to empty
         playerInventory.currentItem = null;
+        receivedItemSprite.sprite = null;
         
         // Stop animation. Back to idle
         _animatorPlayer.SetBool("receive_item", false);
