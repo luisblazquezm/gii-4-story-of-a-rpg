@@ -9,18 +9,20 @@ public class ChestBehaviour : Interactable
     public Item contentItem;
     public Inventory playerInventory;
     public bool isOpen;
-    //Animator
     public GameObject dialogBox;
     public GameObject player;
     public Text dialogText;
     private Animator _animatorChest, _animatorPlayer;
     public SpriteRenderer receivedItemSprite;
-    
+    public AudioSource _audioSongChest;
+
     // Start is called before the first frame update
     void Start()
     {
         _animatorChest = GetComponent<Animator>();
         _animatorPlayer = player.GetComponent<Animator>();
+        _audioSongChest = GetComponent<AudioSource>();
+        _audioSongChest.Stop();
     }
 
     // Update is called once per frame
@@ -62,6 +64,8 @@ public class ChestBehaviour : Interactable
         // playerInventory.currentItem = contentItem;
         // Allow attack and print dialogBox
         
+        // Play music
+        _audioSongChest.Play();
         
         // Animate the player
         _animatorPlayer.SetBool("receive_item", true);
@@ -88,6 +92,9 @@ public class ChestBehaviour : Interactable
         // Stop animation. Back to idle
         _animatorPlayer.SetBool("receive_item", false);
         contextClue.SetActive(false);
+        
+        // Stop song and play general audio
+        _audioSongChest.Stop();
         
         //player.transform.GetChild(1).gameObject; // Get the received item
     }

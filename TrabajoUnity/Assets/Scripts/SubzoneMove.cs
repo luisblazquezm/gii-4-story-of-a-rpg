@@ -32,7 +32,7 @@ public class SubzoneMove : MonoBehaviour
         {
             // Adds the number of points or positions of the new camera change
             _cam.minPosition += cameraChange;
-            _cam.maxPosition += cameraChange + new Vector2(0, 5); // Adds vector2 because the camera does not get to the top in zone2
+            _cam.maxPosition += cameraChange; // Adds vector2 because the camera does not get to the top in zone2
             other.transform.position += playerChange;
 
             // IMPORTANT: if the room is not square , we will need 2 vectors

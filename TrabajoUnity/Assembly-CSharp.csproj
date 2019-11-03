@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Sign.cs" />
     <Compile Include="Assets\Scripts\Signal.cs" />
     <Compile Include="Assets\Scripts\SubzoneMove.cs" />
+    <Compile Include="Assets\Scripts\Teleport.cs" />
     <None Include="Assets\Sprites\LPC_weapons_pack\README.txt" />
     <None Include="Assets\Sprites\Others\FreePixelGear\ReadMe.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

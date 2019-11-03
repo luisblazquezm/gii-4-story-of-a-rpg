@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ca886d66825fd4095dee44e1074a80, type: 3}
   m_Name: Lightsaber
   m_EditorClassIdentifier: 
-  itemSprite: {fileID: 21300036, guid: cb97c5220c307d44e903c81f3d98fe80, type: 3}
+  itemSprite: {fileID: 21300002, guid: cb97c5220c307d44e903c81f3d98fe80, type: 3}
   itemDescription: The power of the force is in you now
   isKey: 0
