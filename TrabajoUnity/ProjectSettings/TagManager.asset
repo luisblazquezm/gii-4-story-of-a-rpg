@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Teleport2
+  - Enemy
+  - Hearth Container
+  - Coin Text
   layers:
   - Default
   - TransparentFX
@@ -49,5 +52,5 @@ TagManager:
     uniqueID: 213487281
     locked: 0
   - name: Player
-    uniqueID: 955276895
+    uniqueID: 177695421
     locked: 0
