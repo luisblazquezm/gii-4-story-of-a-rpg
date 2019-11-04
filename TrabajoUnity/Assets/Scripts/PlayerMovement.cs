@@ -96,9 +96,9 @@ public class PlayerMovement : MonoBehaviour
         currentPlayerMana -= 5;
         
         // Change the image display of the barr
-        var rectTransformPosition = manaBarr.rectTransform.position;
-        rectTransformPosition.x -= 31f;
-        manaBarr.rectTransform.position = rectTransformPosition;
+        //var rectTransformPosition = manaBarr.rectTransform.position;
+        //rectTransformPosition.x -= 31f;
+        //manaBarr.rectTransform.position = rectTransformPosition;
         manaBarr.rectTransform.sizeDelta = new Vector2(manaBarr.rectTransform.sizeDelta.x - 50, manaBarr.rectTransform.sizeDelta.y);
         yield return null;
         

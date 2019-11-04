@@ -73,7 +73,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 474}
   m_MaxSize: {x: 10004, y: 14024}
   vertical: 1
-  controlID: 150
+  controlID: 88
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,8 +145,8 @@ MonoBehaviour:
     y: 569
     width: 900
     height: 362
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 124}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 18}
@@ -177,10 +177,10 @@ MonoBehaviour:
     y: 0
     width: 900
     height: 931
-  m_MinSize: {x: 202, y: 324}
-  m_MaxSize: {x: 4002, y: 8024}
+  m_MinSize: {x: 202, y: 348}
+  m_MaxSize: {x: 4002, y: 8048}
   vertical: 1
-  controlID: 97
+  controlID: 36
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 711, y: 474}
   m_MaxSize: {x: 18006, y: 14024}
   vertical: 0
-  controlID: 96
+  controlID: 35
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -652,20 +652,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Luis\Documents\GitHub\story-of-a-rpg\TrabajoUnity
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 211}
-    m_SelectedIDs: 981b0000
-    m_LastClickedID: 7064
-    m_ExpandedIDs: 00000000a8090000c409000024150000d2150000821600007c170000821b0000981b0000381f000030250000fe260000702e000004310000d4490000b0530000e45300006c55000080550000c05600009484000000ca9a3b
+    scrollPos: {x: 0, y: 271}
+    m_SelectedIDs: 4e6a0000
+    m_LastClickedID: 27214
+    m_ExpandedIDs: 000000001227000030270000d2300000ac3200005e3300000e3400000c3500002e39000044390000f63c0000fa420000d0440000124e0000b4500000186a0000f87300002c740000ba750000ce7500001077000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,7 +693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a8090000c4090000821600007c170000821b0000981b0000381f0000702e000004310000d4490000
+    m_ExpandedIDs: 000000001227000030270000d2300000ac3200005e3300000e3400000c3500002e39000044390000f63c0000fa420000d0440000124e0000b4500000186a0000f87300002c740000ba750000ce75000010770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ec5200000e5c0000aa4b000090510000204a0000a4580000d44e00001e570000e6550000324800001e4d000000000000ac6a0000cc300000d43000009c44000050300000921a0000a83a0000fe090000240a0000bc5500008a7b0000b87b0000847f0000861d000094ae0000381600004c1d00002c0a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -777,9 +777,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f846feff
-      m_LastClickedID: -112904
-      m_ExpandedIDs: 0eedfdffd4fbffff7c5c0000865c0000965c0000bc5c0000c45c0000
+      m_SelectedIDs: b67c0000
+      m_LastClickedID: 31926
+      m_ExpandedIDs: 66f6ffff3e7d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -834,9 +834,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 152.35945, y: 439.3085, z: -1.25}
+    m_Target: {x: 152.30292, y: 492.15845, z: -3.0859964}
     speed: 2
-    m_Value: {x: 152.35945, y: 439.3085, z: -1.25}
+    m_Value: {x: 152.30292, y: 492.15845, z: -3.0859964}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -868,9 +868,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 139.97949
+    m_Target: 322.21243
     speed: 2
-    m_Value: 139.97949
+    m_Value: 322.21243
   m_Ortho:
     m_Target: 1
     speed: 2
