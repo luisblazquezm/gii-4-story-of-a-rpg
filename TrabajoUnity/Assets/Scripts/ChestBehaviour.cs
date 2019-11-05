@@ -12,10 +12,11 @@ public class ChestBehaviour : Interactable
     public GameObject dialogBox;
     public GameObject player;
     public Text dialogText;
-    private Animator _animatorChest, _animatorPlayer;
     public SpriteRenderer receivedItemSprite;
     public AudioSource _audioSongChest;
-
+    
+    private Animator _animatorChest, _animatorPlayer;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -39,8 +40,12 @@ public class ChestBehaviour : Interactable
             Debug.Log("OLE2");
             if (!isOpen)
             {
+                // Play music
+                _audioSongChest.Play();
+                
                 // Open the chest
                 openChest();
+                CloseOtherChests();
             }
             else
             {
@@ -63,10 +68,7 @@ public class ChestBehaviour : Interactable
         // playerInventory.AddItem(contentItem);
         // playerInventory.currentItem = contentItem;
         // Allow attack and print dialogBox
-        
-        // Play music
-        _audioSongChest.Play();
-        
+
         // Animate the player
         _animatorPlayer.SetBool("receive_item", true);
         _animatorChest.SetBool("openChest", true);
@@ -92,10 +94,17 @@ public class ChestBehaviour : Interactable
         // Stop animation. Back to idle
         _animatorPlayer.SetBool("receive_item", false);
         contextClue.SetActive(false);
-        
-        // Stop song and play general audio
-        _audioSongChest.Stop();
-        
+
         //player.transform.GetChild(1).gameObject; // Get the received item
+    }
+
+    public void CloseOtherChests()
+    {
+        GameObject[] otherChests = GameObject.FindGameObjectsWithTag("Chest");
+        for (int i = 0; i < otherChests.Length; i++)
+        {
+            if (otherChests[i].gameObject != this.gameObject)
+                otherChests[i].SetActive(false);
+        }
     }
 }

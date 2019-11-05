@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mjolnir
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300004, guid: cb97c5220c307d44e903c81f3d98fe80, type: 3}
-  itemDescription: 
+  itemDescription: "You have received \"Mjolnir\". Those who hold this hammer... If
+    worthy, will possess Thor\xB4s power "
   isKey: 0

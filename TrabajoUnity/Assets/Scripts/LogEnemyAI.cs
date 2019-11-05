@@ -97,7 +97,7 @@ public class LogEnemyAI : Enemy
     void destroyInstance()
     {
         Debug.Log("Entre");
-        //Destroy(this.gameObject);
-        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
+        //this.gameObject.SetActive(false);
     }
 }

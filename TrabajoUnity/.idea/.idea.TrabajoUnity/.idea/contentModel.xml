@@ -6,8 +6,10 @@
     <e p="C:\Users\Luis\Documents\GitHub\story-of-a-rpg\TrabajoUnity" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="HouseCharateristics.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="CameraMovement.cs" t="Include" />
+          <e p="ChestAwardBehaviour.cs" t="Include" />
           <e p="ChestBehaviour.cs" t="Include" />
           <e p="CoinBehaviour.cs" t="Include" />
           <e p="CoinTextManager.cs" t="Include" />
@@ -20,6 +22,7 @@
           <e p="Item.cs" t="Include" />
           <e p="KnockbackMelee.cs" t="Include" />
           <e p="LogEnemyAI.cs" t="Include" />
+          <e p="LootTableManegement.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
           <e p="Signal.cs" t="Include" />

@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Hearth Container
   - Coin Text
+  - Chest
+  - Diamond
   layers:
   - Default
   - TransparentFX

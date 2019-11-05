@@ -20,7 +20,8 @@ public class Enemy : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
-
+    public LootTableManegement lootTable;
+    
     private void Start()
     {
         health = maxHealth.initialValue;
@@ -45,8 +46,21 @@ public class Enemy : MonoBehaviour
     void destroyInstanceEnemy()
     {
         Debug.Log("Entre");
-        //Destroy(this.gameObject);
-        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
+        MakeLoot();
+    }
+
+    private void MakeLoot()
+    {
+        if (lootTable != null)
+        {
+            GameObject current = lootTable.LootPowerup();
+            if (current != null)
+            {
+                // Creates the object in the position where the enemy dies
+                Instantiate(current.gameObject, transform.position, Quaternion.identity);
+            }
+        }
     }
     
     private IEnumerator KnockCoroutine(Rigidbody2D enemyRB, float knockTime)

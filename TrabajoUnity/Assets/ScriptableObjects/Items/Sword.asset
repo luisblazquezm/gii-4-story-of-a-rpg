@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300000, guid: cb97c5220c307d44e903c81f3d98fe80, type: 3}
-  itemDescription: 
+  itemDescription: You have received "Anduril, Flame of the West", forged from the
+    shards of Narsil
   isKey: 0

@@ -57,7 +57,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\HouseCharateristics.cs" />
     <Compile Include="Assets\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\Scripts\ChestAwardBehaviour.cs" />
     <Compile Include="Assets\Scripts\ChestBehaviour.cs" />
     <Compile Include="Assets\Scripts\CoinBehaviour.cs" />
     <Compile Include="Assets\Scripts\CoinTextManager.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\KnockbackMelee.cs" />
     <Compile Include="Assets\Scripts\LogEnemyAI.cs" />
+    <Compile Include="Assets\Scripts\LootTableManegement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sign.cs" />
     <Compile Include="Assets\Scripts\Signal.cs" />

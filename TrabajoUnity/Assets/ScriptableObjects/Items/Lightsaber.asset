@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Lightsaber
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 21300002, guid: cb97c5220c307d44e903c81f3d98fe80, type: 3}
-  itemDescription: The power of the force is in you now
+  itemDescription: You have received "Blue Ligthsaber". The power of the force resides
+    on you now ...
   isKey: 0

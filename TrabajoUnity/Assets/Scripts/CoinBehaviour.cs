@@ -23,7 +23,15 @@ public class CoinBehaviour : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            playerInventory.coins += 1;
+            if (this.CompareTag("Diamond"))
+            {
+                playerInventory.coins += 5;
+            }
+            else
+            {
+                playerInventory.coins += 1;
+            }
+            
             GameObject.FindWithTag("Coin Text").GetComponent<CoinTextManager>().UpdateCoinCount();
             Destroy(this.gameObject);
         }

@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
     void destroyInstance()
     {
         Debug.Log("Entre");
-        //Destroy(this.gameObject);
-        this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
+        //this.gameObject.SetActive(false);
     }
 }

@@ -9,7 +9,8 @@ public class Inventory : ScriptableObject
     public List<Item> items = new List<Item>();
     public int numberOfKeys;
     public int coins = 0;
-
+    public int currentWeaponID;
+    
     public void AddItem(Item itemToAdd)
     {
         // is the item a key?
