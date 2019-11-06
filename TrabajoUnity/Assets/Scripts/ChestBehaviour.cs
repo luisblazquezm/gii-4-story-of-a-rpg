@@ -6,15 +6,18 @@ using UnityEngine.UI;
 
 public class ChestBehaviour : Interactable
 {
+    public int itemID;
     public Item contentItem;
     public Inventory playerInventory;
     public bool isOpen;
+    public bool isFinalChest;
     public GameObject dialogBox;
     public GameObject player;
     public Text dialogText;
     public SpriteRenderer receivedItemSprite;
-    public AudioSource _audioSongChest;
+    public AudioClip[] _audioClips;
     
+    private AudioSource _audioSongChest;
     private Animator _animatorChest, _animatorPlayer;
     
     // Start is called before the first frame update
@@ -37,12 +40,8 @@ public class ChestBehaviour : Interactable
         // Getkey gives problems so better getkeydown
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && !isOpen)
         {
-            Debug.Log("OLE2");
             if (!isOpen)
             {
-                // Play music
-                _audioSongChest.Play();
-                
                 // Open the chest
                 openChest();
                 CloseOtherChests();
@@ -69,6 +68,17 @@ public class ChestBehaviour : Interactable
         // playerInventory.currentItem = contentItem;
         // Allow attack and print dialogBox
 
+        if (isFinalChest)
+        {
+            _audioSongChest.loop = true;
+            _audioSongChest.PlayOneShot(_audioClips[playerInventory.currentWeaponID]);
+        }
+        else
+        {
+            // Play music
+            _audioSongChest.PlayOneShot(_audioClips[0]);
+        }
+
         // Animate the player
         _animatorPlayer.SetBool("receive_item", true);
         _animatorChest.SetBool("openChest", true);
@@ -94,6 +104,13 @@ public class ChestBehaviour : Interactable
         // Stop animation. Back to idle
         _animatorPlayer.SetBool("receive_item", false);
         contextClue.SetActive(false);
+        
+        if (!isFinalChest)
+        {
+            // Play music
+            _audioSongChest.Stop();
+        }
+        
 
         //player.transform.GetChild(1).gameObject; // Get the received item
     }
@@ -106,5 +123,7 @@ public class ChestBehaviour : Interactable
             if (otherChests[i].gameObject != this.gameObject)
                 otherChests[i].SetActive(false);
         }
+
+        playerInventory.currentWeaponID = this.itemID;
     }
 }
