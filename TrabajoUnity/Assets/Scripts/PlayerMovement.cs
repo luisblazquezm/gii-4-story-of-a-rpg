@@ -25,10 +25,15 @@ public class PlayerMovement : MonoBehaviour
     public FloatValue currentMana;
     private float currentPlayerMana;
     public Image manaBarr;
+    public GameObject[] projectiles;
+    public Inventory playerInventory;
+    
+    public bool secondPowerActivated;
     
     // Start is called before the first frame update
     void Start()
     {
+        secondPowerActivated = false;
         currentState = PlayerState.walk;
         _transform = GetComponent<Transform>();
         _animator = GetComponent<Animator>();
@@ -58,14 +63,16 @@ public class PlayerMovement : MonoBehaviour
             && currentState != PlayerState.attack 
             && currentState != PlayerState.stagger)
         {
+            Debug.Log("PlayerMovement: Attack");
             StartCoroutine(AttackPlayerCoroutine());
         } 
         else if (Input.GetMouseButtonDown(1) 
                  && currentState != PlayerState.attack 
                  && currentState != PlayerState.stagger
+                 && secondPowerActivated
                  && currentPlayerMana >= 0)
         {
-            Debug.Log("PlayerMovement: SPecialPower");
+            Debug.Log("PlayerMovement: SpecialPower");
             StartCoroutine(SpecialPowerPlayerCoroutine());
         }
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
@@ -91,21 +98,36 @@ public class PlayerMovement : MonoBehaviour
     // We use a coroutine to do various things in parallel. In this case to use the special power
     private IEnumerator SpecialPowerPlayerCoroutine()
     {
-        _animator.SetBool("special power", true);
+        _animator.SetBool("specialPower", true);
         currentState = PlayerState.specialPower;
         currentPlayerMana -= 5;
+
+        // Create the projectile or throwable object
+        //MakeProjectileOnPlayerPosition(); IMPORTANT: it is done as an event in the animation
         
         // Change the image display of the barr
-        //var rectTransformPosition = manaBarr.rectTransform.position;
-        //rectTransformPosition.x -= 31f;
-        //manaBarr.rectTransform.position = rectTransformPosition;
-        manaBarr.rectTransform.sizeDelta = new Vector2(manaBarr.rectTransform.sizeDelta.x - 50, manaBarr.rectTransform.sizeDelta.y);
+        manaBarr.rectTransform.sizeDelta = new Vector2(manaBarr.rectTransform.sizeDelta.x - 30, manaBarr.rectTransform.sizeDelta.y);
         yield return null;
         
         // This allows to not come back to the animation of attacking once we do it 
-        _animator.SetBool("special power", false);
+        _animator.SetBool("specialPower", false);
         yield return new WaitForSeconds(0.3f);
         currentState = PlayerState.walk;
+    }
+
+    private void MakeProjectileOnPlayerPosition()
+    {
+        Debug.Log("The ID of the object throwing is: " + playerInventory.currentWeaponID);
+        Vector2 temp = new Vector2(_animator.GetFloat("moveX"),
+                                   _animator.GetFloat("moveY"));
+        ThrowableObject projectile = Instantiate(this.projectiles[playerInventory.currentWeaponID], transform.position, Quaternion.identity).GetComponent<ThrowableObject>();
+        projectile.Setup(temp, ChooseProjectileDirection());
+    }
+
+    Vector3 ChooseProjectileDirection()
+    {
+        float temp = Mathf.Atan2(_animator.GetFloat("moveY"), _animator.GetFloat("moveX")) * Mathf.Rad2Deg;
+        return new Vector3(0, 0, temp);
     }
     
     void MovePlayerAnimation(Vector3 vector3)

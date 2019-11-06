@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\Luis\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Luis\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TrabajoUnity.-673795048.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Luis\Documents\GitHub\story-of-a-rpg\TrabajoUnity" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="HouseCharateristics.cs" t="Include" />
@@ -12,8 +14,8 @@
           <e p="CoinTextManager.cs" t="Include" />
           <e p="ContextClue.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
-          <e p="EnemyManager.cs" t="Include" />
           <e p="FloatValue.cs" t="Include" />
+          <e p="GoblinEnemyAI.cs" t="Include" />
           <e p="HeartManager.cs" t="Include" />
           <e p="Interactable.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
@@ -26,6 +28,7 @@
           <e p="Signal.cs" t="Include" />
           <e p="SubzoneMove.cs" t="Include" />
           <e p="Teleport.cs" t="Include" />
+          <e p="ThrowableObject.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="LPC_weapons_pack" t="Include">
@@ -68,10 +71,8 @@
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
       <e p="TrabajoUnity.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_TrabajoUnity.839037775.00" t="ExcludeRecursive" />
   </component>
 </project>

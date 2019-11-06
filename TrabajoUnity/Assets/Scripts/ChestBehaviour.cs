@@ -45,6 +45,7 @@ public class ChestBehaviour : Interactable
                 // Open the chest
                 openChest();
                 CloseOtherChests();
+                PrepareCharacter();
             }
             else
             {
@@ -110,7 +111,6 @@ public class ChestBehaviour : Interactable
             // Play music
             _audioSongChest.Stop();
         }
-        
 
         //player.transform.GetChild(1).gameObject; // Get the received item
     }
@@ -125,5 +125,31 @@ public class ChestBehaviour : Interactable
         }
 
         playerInventory.currentWeaponID = this.itemID;
+    }
+
+    public void PrepareCharacter()
+    {
+        Debug.Log("Preparing Character");
+        // First activate its sprite and animation of attack depending on the weapon chosed
+        switch (this.itemID)
+        {
+            case 0:
+                _animatorPlayer.SetBool("weapon0", true);
+                break;
+            case 1:
+                _animatorPlayer.SetBool("weapon1", true);
+                break; 
+            case 2:
+                _animatorPlayer.SetBool("weapon2", true);
+                break;
+            default:
+                break;
+        }
+        
+        // Activate second power
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().secondPowerActivated = true;
+        
+        // Activates the teleport from forest3 to forest4. Now the player can travel
+        GameObject.FindWithTag("TeleportAttack").SetActive(true);
     }
 }

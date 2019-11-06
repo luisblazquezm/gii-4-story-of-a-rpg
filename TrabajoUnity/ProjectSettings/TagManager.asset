@@ -10,6 +10,7 @@ TagManager:
   - Coin Text
   - Chest
   - Diamond
+  - TeleportAttack
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player Projectile
+  - Player
   - 
   - 
   - 
