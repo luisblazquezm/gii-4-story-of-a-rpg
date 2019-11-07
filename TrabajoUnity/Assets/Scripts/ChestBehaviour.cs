@@ -71,6 +71,7 @@ public class ChestBehaviour : Interactable
 
         if (isFinalChest)
         {
+            GameObject.Find("MainCamera").GetComponent<AudioSource>().Stop();
             _audioSongChest.loop = true;
             _audioSongChest.PlayOneShot(_audioClips[playerInventory.currentWeaponID]);
         }
@@ -150,6 +151,6 @@ public class ChestBehaviour : Interactable
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().secondPowerActivated = true;
         
         // Activates the teleport from forest3 to forest4. Now the player can travel
-        GameObject.FindWithTag("TeleportAttack").SetActive(true);
+        GameObject.Find("Teleport Forest3-Forest4").SetActive(true);
     }
 }

@@ -7,13 +7,26 @@ public class ThrowableObject : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D projectileRigidBody;
-    
+    private GameObject camera;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        camera = GameObject.Find("Main Camera");
     }
+
+    /*
+    private void Update()
+    {
+        if (this.transform.position.x > camera.GetComponent<CameraMovement>().maxPosition.x ||
+            this.transform.position.x > camera.GetComponent<CameraMovement>().minPosition.x ||
+            this.transform.position.y > camera.GetComponent<CameraMovement>().maxPosition.y ||
+            this.transform.position.y > camera.GetComponent<CameraMovement>().minPosition.y)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    */
 
     public void Setup(Vector2 velocity, Vector3 direction)
     {

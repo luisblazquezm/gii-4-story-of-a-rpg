@@ -27,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public Image manaBarr;
     public GameObject[] projectiles;
     public Inventory playerInventory;
+    public VectorValue startingPosition;
     
     public bool secondPowerActivated;
     
@@ -40,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
         _rigidBody2D = GetComponent<Rigidbody2D>();
         currentPlayerHealth = currentHealth.initialValue;
         currentPlayerMana = currentMana.initialValue;
+        if (startingPosition != null)
+            transform.position = startingPosition.initialValue;
     }
 
     void Update()
@@ -120,8 +123,75 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("The ID of the object throwing is: " + playerInventory.currentWeaponID);
         Vector2 temp = new Vector2(_animator.GetFloat("moveX"),
                                    _animator.GetFloat("moveY"));
-        ThrowableObject projectile = Instantiate(this.projectiles[playerInventory.currentWeaponID], transform.position, Quaternion.identity).GetComponent<ThrowableObject>();
-        projectile.Setup(temp, ChooseProjectileDirection());
+        
+        // If it´s thor´s hammer we will play the animation to throw it back and forth
+        
+        if (playerInventory.currentWeaponID == 1)
+        {
+            Debug.Log("jeje");
+            StartCoroutine(ChangeAnim(temp, GameObject.Find("Mjolnir")));
+            ThrowableObject projectile = Instantiate(this.projectiles[playerInventory.currentWeaponID], transform.position, Quaternion.identity).GetComponent<ThrowableObject>();
+            projectile.GetComponent<SpriteRenderer>().enabled = false;
+            projectile.Setup(temp, ChooseProjectileDirection());
+        }
+        else
+        {
+            ThrowableObject projectile = Instantiate(this.projectiles[playerInventory.currentWeaponID], transform.position, Quaternion.identity).GetComponent<ThrowableObject>();
+            projectile.Setup(temp, ChooseProjectileDirection());
+        }
+
+    }
+
+    private IEnumerator ChangeAnim(Vector2 direction, GameObject weapon)
+    {
+        // Controls movement of the enemy
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > 0)
+            {
+                weapon.GetComponent<SpriteRenderer>().enabled = true;
+                weapon.GetComponent<Animator>().enabled = true;
+                weapon.GetComponent<Animator>().Play("hammerThrowable");
+                yield return new WaitForSeconds(1.2f);
+                
+                weapon.GetComponent<SpriteRenderer>().enabled = false;
+                weapon.GetComponent<Animator>().enabled = false;
+            } 
+            else if (direction.x < 0)
+            {
+                weapon.GetComponent<SpriteRenderer>().enabled = true;
+                weapon.GetComponent<Animator>().enabled = true;
+
+                weapon.GetComponent<Animator>().Play("hammerThrowableLeft");
+                yield return new WaitForSeconds(1.2f);
+                
+                weapon.GetComponent<SpriteRenderer>().enabled = false;
+                weapon.GetComponent<Animator>().enabled = false; // To stop the animation. Stop is deprecated
+            }
+        } 
+        else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            if (direction.y > 0)
+            {
+                weapon.GetComponent<SpriteRenderer>().enabled = true;
+                weapon.GetComponent<Animator>().enabled = true;
+                weapon.GetComponent<Animator>().Play("hammerThrowableUp");
+                yield return new WaitForSeconds(1.2f);
+                
+                weapon.GetComponent<SpriteRenderer>().enabled = false;
+                weapon.GetComponent<Animator>().enabled = false; // To stop the animation. Stop is deprecated
+            } 
+            else if (direction.y < 0)
+            {
+                weapon.GetComponent<SpriteRenderer>().enabled = true;
+                weapon.GetComponent<Animator>().enabled = true;
+                weapon.GetComponent<Animator>().Play("hammerThrowable");
+                yield return new WaitForSeconds(1.2f);
+                
+                weapon.GetComponent<SpriteRenderer>().enabled = false;
+                weapon.GetComponent<Animator>().enabled = false; // To stop the animation. Stop is deprecated
+            }
+        }
     }
 
     Vector3 ChooseProjectileDirection()

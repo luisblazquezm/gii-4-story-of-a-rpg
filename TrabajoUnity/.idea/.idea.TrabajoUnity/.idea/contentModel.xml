@@ -24,11 +24,13 @@
           <e p="LogEnemyAI.cs" t="Include" />
           <e p="LootTableManegement.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="SceneTransitionManagement.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
           <e p="Signal.cs" t="Include" />
           <e p="SubzoneMove.cs" t="Include" />
           <e p="Teleport.cs" t="Include" />
           <e p="ThrowableObject.cs" t="Include" />
+          <e p="VectorValue.cs" t="Include" />
         </e>
         <e p="Sprites" t="Include">
           <e p="LPC_weapons_pack" t="Include">
