@@ -24,6 +24,7 @@ public class Interactable : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("ENTER of Trigger Interactable");
             playerInRange = true;
             contextClue.SetActive(true);
         }
@@ -31,8 +32,10 @@ public class Interactable : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("EXITE");
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Exit of Trigger Interactable");
             playerInRange = false;
             contextClue.SetActive(false);
         }

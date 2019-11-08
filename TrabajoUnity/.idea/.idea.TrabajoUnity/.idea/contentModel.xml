@@ -28,6 +28,7 @@
           <e p="PlayerMovement.cs" t="Include" />
           <e p="PowerUpChestManagement.cs" t="Include" />
           <e p="SceneTransitionManagement.cs" t="Include" />
+          <e p="ShowEndOfGame.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
           <e p="Signal.cs" t="Include" />
           <e p="SkeletonEnemyAI.cs" t="Include" />

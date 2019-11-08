@@ -51,6 +51,7 @@ public class DemonEnemyAI : Enemy
             _animator.SetBool("wakeUp", false);
             _animator.SetBool("attackPlayer", false);
         }
+        
     }
 
     private void SetAnimFloat(Vector2 setVector)
@@ -94,11 +95,5 @@ public class DemonEnemyAI : Enemy
             currentState = newState;
         }
     }
-
-    void destroyInstance()
-    {
-        Debug.Log("Entre");
-        Destroy(this.gameObject);
-        //this.gameObject.SetActive(false);
-    }
+    
 }

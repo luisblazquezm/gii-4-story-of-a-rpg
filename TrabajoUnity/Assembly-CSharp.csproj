@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PowerUpChestManagement.cs" />
     <Compile Include="Assets\Scripts\SceneTransitionManagement.cs" />
+    <Compile Include="Assets\Scripts\ShowEndOfGame.cs" />
     <Compile Include="Assets\Scripts\Sign.cs" />
     <Compile Include="Assets\Scripts\Signal.cs" />
     <Compile Include="Assets\Scripts\SkeletonEnemyAI.cs" />

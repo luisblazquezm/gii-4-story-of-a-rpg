@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -22,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     public Image manaBarr;
     public Inventory playerInventory;
     public VectorValue startingPosition;
+    public bool attackActivated;
     public bool secondPowerActivated;
     public GameObject[] projectiles;
     public RuntimeAnimatorController[] animatorControllers;
@@ -33,10 +36,20 @@ public class PlayerMovement : MonoBehaviour
     protected Animator _animator;
     protected Transform _transform;
 
-    
+    private void Awake()
+    {
+        // The settings of the player only save from the sample scene to the fInal scene
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene") || SceneManager.GetActiveScene().name.Equals("FinalScene"))
+        {
+            DontDestroyOnLoad(this.gameObject);
+        }
+            
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        attackActivated = false;
         secondPowerActivated = false;
         currentState = PlayerState.walk;
         _transform = GetComponent<Transform>();
@@ -44,8 +57,14 @@ public class PlayerMovement : MonoBehaviour
         _rigidBody2D = GetComponent<Rigidbody2D>();
         currentPlayerHealth = currentHealth.initialValue;
         currentPlayerMana = currentMana.initialValue;
-        if (startingPosition != null)
+        Debug.Log("La escena es: " + SceneManager.GetActiveScene().name + " y el startingPosition es: " + startingPosition);
+        if (startingPosition != null 
+            && !SceneManager.GetActiveScene().name.Equals("Intro"))
+        {
+            Debug.Log("La posicion inicial es x: " + startingPosition.initialValue.x + " - y: " +
+                      startingPosition.initialValue.y);
             transform.position = startingPosition.initialValue;
+        }
     }
 
     void Update()
@@ -66,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Left click to attack
         if (Input.GetMouseButtonDown(0) 
+            && attackActivated
             && currentState != PlayerState.attack 
             && currentState != PlayerState.stagger)
         {
@@ -91,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
     // We use a coroutine to do various things in parallel. Like walking and attacking
     private IEnumerator AttackPlayerCoroutine()
     {
+        Debug.Log("EL id del arma es: " + playerInventory.currentWeaponID);
         _animator.SetBool("attack", true);
         currentState = PlayerState.attack;
         yield return null;

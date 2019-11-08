@@ -43,11 +43,9 @@ public class Teleport : MonoBehaviour
             // of maxPosition
             
             // Adds the number of points or positions of the new camera change
-            _cam.minPosition.x += cameraMinChange.x;
-            _cam.maxPosition.x += cameraMaxChange.x;
-            _cam.minPosition.y = cameraMinChange.y;
-            _cam.maxPosition.y = cameraMaxChange.y; // Adds vector2 because the camera does not get to the top in zone2
-            
+            _cam.minPosition = cameraMinChange;
+            _cam.maxPosition = cameraMaxChange;
+
             other.transform.position = targetZoneToTeleport.transform.GetChild(0).transform.position; // Change the position of the entry with the exit of the targetZone to teleport (which is the child of the entry)
         }
         

@@ -173,11 +173,12 @@ public class ChestBehaviour : Interactable
                 break;
         }
         
-        // Activate second power
+        // Activate second power and attack
+        _thePlayer.GetComponent<PlayerMovement>().attackActivated = true;
         _thePlayer.GetComponent<PlayerMovement>().secondPowerActivated = true;
         
         // Activates the teleport from forest3 to forest4. Now the player can travel
-        GameObject.FindWithTag("Sign").SetActive(false);
+        GameObject.Find("Sign Forest 6").SetActive(false);
     }
 
     private void TransformCharacter()

@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum EnemyState
 {
     walk,
     attack,
     stagger,
+    dead,
     idle
 }
 
@@ -21,7 +23,8 @@ public class Enemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
     public LootTableManegement lootTable;
-    
+    public GameObject fadeOutPanel;
+
     private void Start()
     {
         health = maxHealth.initialValue;
@@ -45,11 +48,20 @@ public class Enemy : MonoBehaviour
     
     void destroyInstanceEnemy()
     {
-        Debug.Log("Entre");
-        Destroy(this.gameObject);
-        MakeLoot();
+        if (this.gameObject.name.Equals("The Demon"))
+        {
+            GameObject.Find("EndOfGame").GetComponent<ShowEndOfGame>().Show();
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Debug.Log("Entre");
+            Destroy(this.gameObject);
+            MakeLoot();
+        }
+        
     }
-
+    
     private void MakeLoot()
     {
         if (lootTable != null)

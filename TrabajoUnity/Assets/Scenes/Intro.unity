@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 476, y: 86}
+  m_AnchoredPosition: {x: 530, y: 86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70802708
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 411, y: 10.6}
+  m_AnchoredPosition: {x: 475, y: 10.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241525690
@@ -1959,7 +1959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -203, y: 13}
+  m_AnchoredPosition: {x: -279, y: 13}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556373267
@@ -2163,7 +2163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &994080735
 GameObject:
@@ -2302,6 +2302,16 @@ PrefabInstance:
         type: 3}
       propertyPath: startingPosition
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892073819649733485, guid: 151a72aa772deb84093d7f6998b7642e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892073819649733485, guid: 151a72aa772deb84093d7f6998b7642e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151a72aa772deb84093d7f6998b7642e, type: 3}
@@ -7444,7 +7454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66, y: 166}
+  m_AnchoredPosition: {x: 66, y: 206}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288116604
@@ -15765,7 +15775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143, y: 86}
+  m_AnchoredPosition: {x: -216, y: 86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723015505
@@ -15894,44 +15904,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: sceneToLoad
-      value: SampleScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: playerStorage
-      value: 
-      objectReference: {fileID: 11400000, guid: 97e9abf7a6243e1428ed7170eb2988ba,
-        type: 2}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: playerPosition.x
-      value: -9.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: playerPosition.y
-      value: 3.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: fadeInPanel
-      value: 
-      objectReference: {fileID: 7444243194695566849, guid: 7586c201743a50547898bbe5025a5c7f,
-        type: 3}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: fadeOutPanel
-      value: 
-      objectReference: {fileID: 8121576177509370438, guid: acb37b0834d643d448ccdb2515d98829,
-        type: 3}
-    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
-        type: 3}
-      propertyPath: fadeWait
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5133790860558842793, guid: 22d058c0105bfc3409b9e0f44a5a6894,
         type: 3}
       propertyPath: m_Name
@@ -15991,6 +15963,44 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: sceneToLoad
+      value: SampleScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 97e9abf7a6243e1428ed7170eb2988ba,
+        type: 2}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: playerPosition.x
+      value: -9.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: playerPosition.y
+      value: 3.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: fadeInPanel
+      value: 
+      objectReference: {fileID: 7444243194695566849, guid: 7586c201743a50547898bbe5025a5c7f,
+        type: 3}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: fadeOutPanel
+      value: 
+      objectReference: {fileID: 8121576177509370438, guid: acb37b0834d643d448ccdb2515d98829,
+        type: 3}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: fadeWait
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d058c0105bfc3409b9e0f44a5a6894, type: 3}

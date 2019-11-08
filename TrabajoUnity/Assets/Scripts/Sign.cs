@@ -19,9 +19,13 @@ public class Sign : Interactable
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Player in range: " + playerInRange);
+
         // Getkey gives problems so better getkeydown
         if (Input.GetKeyDown(KeyCode.E) && playerInRange)
         {
+            Debug.Log("DialogBox in activeInherarchy: " + dialogBox.activeInHierarchy);
+
             if (dialogBox.activeInHierarchy)
             {
                 dialogBox.SetActive(false);
@@ -38,6 +42,7 @@ public class Sign : Interactable
     {
         if (other.CompareTag("Player"))
         {
+            playerInRange = false;
             dialogBox.SetActive(false);  // Makes the box dissapear
             contextClue.SetActive(false);
         }
