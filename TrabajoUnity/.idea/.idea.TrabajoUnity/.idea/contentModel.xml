@@ -13,6 +13,7 @@
           <e p="CoinBehaviour.cs" t="Include" />
           <e p="CoinTextManager.cs" t="Include" />
           <e p="ContextClue.cs" t="Include" />
+          <e p="DemonEnemyAI.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="FloatValue.cs" t="Include" />
           <e p="GoblinEnemyAI.cs" t="Include" />
@@ -27,6 +28,7 @@
           <e p="SceneTransitionManagement.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
           <e p="Signal.cs" t="Include" />
+          <e p="SkeletonEnemyAI.cs" t="Include" />
           <e p="SubzoneMove.cs" t="Include" />
           <e p="Teleport.cs" t="Include" />
           <e p="ThrowableObject.cs" t="Include" />

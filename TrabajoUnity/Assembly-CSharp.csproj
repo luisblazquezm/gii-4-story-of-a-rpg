@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\CoinBehaviour.cs" />
     <Compile Include="Assets\Scripts\CoinTextManager.cs" />
     <Compile Include="Assets\Scripts\ContextClue.cs" />
+    <Compile Include="Assets\Scripts\DemonEnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\FloatValue.cs" />
     <Compile Include="Assets\Scripts\GoblinEnemyAI.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\SceneTransitionManagement.cs" />
     <Compile Include="Assets\Scripts\Sign.cs" />
     <Compile Include="Assets\Scripts\Signal.cs" />
+    <Compile Include="Assets\Scripts\SkeletonEnemyAI.cs" />
     <Compile Include="Assets\Scripts\SubzoneMove.cs" />
     <Compile Include="Assets\Scripts\Teleport.cs" />
     <Compile Include="Assets\Scripts\ThrowableObject.cs" />

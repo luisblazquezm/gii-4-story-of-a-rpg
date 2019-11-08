@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5633113352913848075}
   - component: {fileID: 5633113352913848074}
   - component: {fileID: 5633113352913848077}
-  - component: {fileID: 2437914528552915240}
+  - component: {fileID: 114518967166686794}
   - component: {fileID: 5633113352913848076}
   - component: {fileID: 5633113352913848079}
   - component: {fileID: 5633113352913848070}
@@ -95,7 +95,7 @@ Animator:
   m_GameObject: {fileID: 5633113352913848078}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8814f481288b13f4ea0509ab6b06b7bb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 21da063148ca3f44082a753d732de29d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -104,7 +104,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2437914528552915240
+--- !u!114 &114518967166686794
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,19 +113,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5633113352913848078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7faf57bf29679fe4e80569d9282e812f, type: 3}
+  m_Script: {fileID: 11500000, guid: 19be8d06226d9ea4895656767deea95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
   maxHealth: {fileID: 0}
-  health: 0
-  enemyName: 
-  baseAttack: 0
-  moveSpeed: 0
-  lootTable: {fileID: 0}
+  health: 5
+  enemyName: Skeleton
+  baseAttack: 2
+  moveSpeed: 1.5
+  lootTable: {fileID: 11400000, guid: 97d2c7d856426804fba19f7630011fc0, type: 2}
   target: {fileID: 0}
-  chaseRadius: 0
-  attackRadius: 0
+  chaseRadius: 4
+  attackRadius: 1.2
   homePosition: {fileID: 0}
 --- !u!50 &5633113352913848076
 Rigidbody2D:
@@ -186,7 +186,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: -0.043157935, y: -0.10821313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
