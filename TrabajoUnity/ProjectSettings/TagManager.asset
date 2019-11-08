@@ -11,6 +11,7 @@ TagManager:
   - Chest
   - Diamond
   - TeleportAttack
+  - Sign
   layers:
   - Default
   - TransparentFX

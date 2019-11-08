@@ -14,6 +14,7 @@
           <e p="CoinTextManager.cs" t="Include" />
           <e p="ContextClue.cs" t="Include" />
           <e p="DemonEnemyAI.cs" t="Include" />
+          <e p="DontDestroyObject.cs" t="Include" />
           <e p="Enemy.cs" t="Include" />
           <e p="FloatValue.cs" t="Include" />
           <e p="GoblinEnemyAI.cs" t="Include" />
@@ -25,6 +26,7 @@
           <e p="LogEnemyAI.cs" t="Include" />
           <e p="LootTableManegement.cs" t="Include" />
           <e p="PlayerMovement.cs" t="Include" />
+          <e p="PowerUpChestManagement.cs" t="Include" />
           <e p="SceneTransitionManagement.cs" t="Include" />
           <e p="Sign.cs" t="Include" />
           <e p="Signal.cs" t="Include" />

@@ -7,12 +7,12 @@ public class ThrowableObject : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D projectileRigidBody;
-    private GameObject camera;
+    private GameObject _theCamera;
     
     // Start is called before the first frame update
     void Start()
     {
-        camera = GameObject.Find("Main Camera");
+        _theCamera = GameObject.Find("Main Camera");
     }
 
     /*

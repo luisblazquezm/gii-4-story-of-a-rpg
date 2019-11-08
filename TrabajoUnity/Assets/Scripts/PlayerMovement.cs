@@ -17,19 +17,22 @@ public class PlayerMovement : MonoBehaviour
 {
     public PlayerState currentState;
     public float speed = 1.1f; // Change the speed in the interphace!!!!
-    protected Transform _transform;
-    protected Animator _animator;
-    protected Rigidbody2D _rigidBody2D;
     public FloatValue currentHealth;
-    private float currentPlayerHealth;
     public FloatValue currentMana;
-    private float currentPlayerMana;
     public Image manaBarr;
-    public GameObject[] projectiles;
     public Inventory playerInventory;
     public VectorValue startingPosition;
-    
     public bool secondPowerActivated;
+    public GameObject[] projectiles;
+    public RuntimeAnimatorController[] animatorControllers;
+    public AudioClip[] attackSounds;
+    
+    private float currentPlayerMana;
+    private float currentPlayerHealth;
+    protected Rigidbody2D _rigidBody2D;
+    protected Animator _animator;
+    protected Transform _transform;
+
     
     // Start is called before the first frame update
     void Start()
@@ -94,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         
         // This allows to not come back to the animation of attacking once we do it 
         _animator.SetBool("attack", false);
+        this.GetComponent<AudioSource>().PlayOneShot(attackSounds[playerInventory.currentWeaponID]);
         yield return new WaitForSeconds(0.3f);
         currentState = PlayerState.walk;
     }
@@ -249,6 +253,11 @@ public class PlayerMovement : MonoBehaviour
             currentState = PlayerState.idle;
             _rigidBody2D.velocity = Vector2.zero;
         }
+    }
+
+    public void SetAnimatorController()
+    {
+        this.GetComponent<Animator>().runtimeAnimatorController = animatorControllers[playerInventory.currentWeaponID] as RuntimeAnimatorController;
     }
     
     void destroyInstance()
