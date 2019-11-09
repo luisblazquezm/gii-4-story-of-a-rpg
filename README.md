@@ -2,6 +2,10 @@
 
 This game in 2D is based on a RPG game where the player must find 3 objects in 3 different scenarios in order to get to a final boss and defeat it. The tools and techniques shown here are used on base of what it has been learnt in class.
 
+## Preview
+
+<Insert preview image of the game here>
+
 ## Main Scheme
 
 * **Player**: basic sprite image player. This is the sprite by default.
