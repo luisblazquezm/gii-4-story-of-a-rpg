@@ -65,8 +65,10 @@
     <Compile Include="Assets\Scripts\ContextClue.cs" />
     <Compile Include="Assets\Scripts\DemonEnemyAI.cs" />
     <Compile Include="Assets\Scripts\DontDestroyObject.cs" />
+    <Compile Include="Assets\Scripts\EndingResults.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\FloatValue.cs" />
+    <Compile Include="Assets\Scripts\GameSaveManagerObjects.cs" />
     <Compile Include="Assets\Scripts\GoblinEnemyAI.cs" />
     <Compile Include="Assets\Scripts\HeartManager.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
@@ -78,6 +80,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PowerUpChestManagement.cs" />
     <Compile Include="Assets\Scripts\SceneTransitionManagement.cs" />
+    <Compile Include="Assets\Scripts\SetupScene.cs" />
     <Compile Include="Assets\Scripts\ShowEndOfGame.cs" />
     <Compile Include="Assets\Scripts\Sign.cs" />
     <Compile Include="Assets\Scripts\Signal.cs" />
@@ -93,7 +96,6 @@
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Sprites\LPC_weapons_pack\README.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
@@ -102,7 +104,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\Sprites\Others\FreePixelGear\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />

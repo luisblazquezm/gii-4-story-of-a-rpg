@@ -30,27 +30,31 @@ public class LogEnemyAI : Enemy
 
     void CheckDistanceOfPlayer()
     {
-        if (Vector3.Distance(target.position, transform.position) <= chaseRadius && 
-            Vector3.Distance(target.position, transform.position) > attackRadius)
+        if (!playerDead)
         {
-            if (currentState == EnemyState.idle || 
-                currentState == EnemyState.walk && currentState != EnemyState.stagger)
+            if (Vector3.Distance(target.position, transform.position) <= chaseRadius && 
+                Vector3.Distance(target.position, transform.position) > attackRadius)
             {
-                Vector3 temp = Vector3.MoveTowards(transform.position, 
-                                                                     target.position, 
-                                                                    moveSpeed * Time.deltaTime);
-                ChangeAnim(temp - transform.position);
-                myRigidBody.MovePosition(temp);
+                if (currentState == EnemyState.idle || 
+                    currentState == EnemyState.walk && currentState != EnemyState.stagger)
+                {
+                    Vector3 temp = Vector3.MoveTowards(transform.position, 
+                        target.position, 
+                        moveSpeed * Time.deltaTime);
+                    ChangeAnim(temp - transform.position);
+                    myRigidBody.MovePosition(temp);
                 
-                ChangeState(EnemyState.walk);
-                _animator.SetBool("wakeUp", true);
-            }
+                    ChangeState(EnemyState.walk);
+                    _animator.SetBool("wakeUp", true);
+                }
             
+            }
+            else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
+            {
+                _animator.SetBool("wakeUp", false);
+            }
         }
-        else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
-        {
-            _animator.SetBool("wakeUp", false);
-        }
+        
     }
 
     private void SetAnimFloat(Vector2 setVector)

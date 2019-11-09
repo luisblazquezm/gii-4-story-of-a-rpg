@@ -8,11 +8,12 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManagement : MonoBehaviour
 {
     public string sceneToLoad;
-    public Vector2 playerPosition;
+    public Vector2 playerNewPosition;
     public VectorValue playerStorage;
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
+    public bool introScene;
     
     /*private void Awake()
     {
@@ -25,12 +26,24 @@ public class SceneTransitionManagement : MonoBehaviour
 */
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !other.isTrigger)
+        Debug.Log("En OnTrigger");
+
+        if (other.CompareTag("Player") && !other.isTrigger && introScene)
         {
-            playerStorage.initialValue = playerPosition;
+            Debug.Log("The new position will be x: " + playerNewPosition.x +" y: " + playerNewPosition.y );
+            playerStorage.initialValue = playerNewPosition;
             StartCoroutine(FadeCoroutine());
         }
-            
+        else
+        {
+            Debug.Log("Aqui estamos");
+            GameObject.Find("Player").transform.position = playerNewPosition;
+            GameObject.Find("Main Camera").transform.position = playerNewPosition;
+            StartCoroutine(FadeCoroutine());
+        }
+        
+        Debug.Log("JAJAJAJA: " + SceneManager.GetActiveScene().name );
+
     }
 
     public IEnumerator FadeCoroutine()

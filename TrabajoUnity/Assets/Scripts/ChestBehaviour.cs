@@ -133,7 +133,7 @@ public class ChestBehaviour : Interactable
         }
         else
         {
-            GameObject.Find("Main Camera").GetComponent<AudioSource>().Stop();
+            GameObject.Find("Music").GetComponent<AudioSource>().Stop();
             _audioSongChest.loop = true;
             _audioSongChest.PlayOneShot(_audioClips[playerInventory.currentWeaponID]);
             TransformCharacter();

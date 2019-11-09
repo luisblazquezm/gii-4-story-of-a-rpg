@@ -123,6 +123,7 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 1.5
   lootTable: {fileID: 11400000, guid: 97d2c7d856426804fba19f7630011fc0, type: 2}
+  fadeOutPanel: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 4
   attackRadius: 1.2
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.12741959, y: -1.1165967}
+  m_Offset: {x: -0.013952151, y: -0.46520585}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +173,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3657458, y: 1.1231064}
+  m_Size: {x: 0.93708885, y: 0.62721264}
   m_EdgeRadius: 0
 --- !u!61 &5633113352913848070
 BoxCollider2D:
@@ -187,7 +188,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043157935, y: -0.10821313}
+  m_Offset: {x: -0.02214536, y: -0.019960761}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -198,7 +199,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.8390086, y: 3.6781793}
+  m_Size: {x: 0.8724299, y: 1.5180926}
   m_EdgeRadius: 0
 --- !u!114 &5633113352913848073
 MonoBehaviour:

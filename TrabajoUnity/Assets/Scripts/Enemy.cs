@@ -24,10 +24,12 @@ public class Enemy : MonoBehaviour
     public float moveSpeed;
     public LootTableManegement lootTable;
     public GameObject fadeOutPanel;
-
+    public static bool playerDead;
+    
     private void Start()
     {
         health = maxHealth.initialValue;
+        playerDead = false;
     }
 
     private void TakeDamage(float damage)
@@ -50,6 +52,7 @@ public class Enemy : MonoBehaviour
     {
         if (this.gameObject.name.Equals("The Demon"))
         {
+            Debug.Log("Game OVER");
             GameObject.Find("EndOfGame").GetComponent<ShowEndOfGame>().Show();
             Destroy(this.gameObject);
         }

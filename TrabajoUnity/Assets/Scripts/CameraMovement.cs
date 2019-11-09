@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class CameraMovement : MonoBehaviour
     // After player movements and not while he is moving, so it looks smoother
     void LateUpdate()
     {
+        
         // The position of the camera (transform) is not the same of the player (target)
         if (transform.position != _target.position)
         {

@@ -12,7 +12,8 @@ public enum PlayerState
     interact,
     stagger,
     idle,
-    specialPower
+    specialPower,
+    dead
 }
 
 public class PlayerMovement : MonoBehaviour
@@ -38,17 +39,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
-        // The settings of the player only save from the sample scene to the fInal scene
-        if (SceneManager.GetActiveScene().name.Equals("SampleScene") || SceneManager.GetActiveScene().name.Equals("FinalScene"))
-        {
-            DontDestroyOnLoad(this.gameObject);
-        }
-            
+        playerInventory.coins = 0;
+
+        if (SceneManager.GetActiveScene().name.Equals("SampleScene"))
+            DontDestroyOnLoad(this);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("En Start");
         attackActivated = false;
         secondPowerActivated = false;
         currentState = PlayerState.walk;
@@ -58,17 +58,15 @@ public class PlayerMovement : MonoBehaviour
         currentPlayerHealth = currentHealth.initialValue;
         currentPlayerMana = currentMana.initialValue;
         Debug.Log("La escena es: " + SceneManager.GetActiveScene().name + " y el startingPosition es: " + startingPosition);
-        if (startingPosition != null 
-            && !SceneManager.GetActiveScene().name.Equals("Intro"))
-        {
-            Debug.Log("La posicion inicial es x: " + startingPosition.initialValue.x + " - y: " +
-                      startingPosition.initialValue.y);
-            transform.position = startingPosition.initialValue;
-        }
+        Debug.Log("La posicion inicial es x: " + startingPosition.initialValue.x + " - y: " +
+                  startingPosition.initialValue.y);
+        _transform.position = startingPosition.initialValue;
+        
     }
 
     void Update()
     {
+        Debug.Log("En Update");
         if (currentState == PlayerState.interact)
         {
             return;
@@ -284,6 +282,7 @@ public class PlayerMovement : MonoBehaviour
     void destroyInstance()
     {
         Debug.Log("Entre");
+        Enemy.playerDead = true;
         Destroy(this.gameObject);
         //this.gameObject.SetActive(false);
     }

@@ -146,7 +146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 530, y: 86}
+  m_AnchoredPosition: {x: 716, y: 156}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70802708
@@ -302,7 +302,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 10.6}
+  m_AnchoredPosition: {x: 685, y: 97}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241525690
@@ -1959,7 +1959,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -279, y: 13}
+  m_AnchoredPosition: {x: -536, y: 67}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &556373267
@@ -2311,10 +2311,16 @@ PrefabInstance:
     - target: {fileID: 3892073819649733485, guid: 151a72aa772deb84093d7f6998b7642e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 151a72aa772deb84093d7f6998b7642e, type: 3}
+--- !u!1 &1084111382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3892073819649733481, guid: 151a72aa772deb84093d7f6998b7642e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1084111381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1173591953
 GameObject:
   m_ObjectHideFlags: 0
@@ -7454,7 +7460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 66, y: 206}
+  m_AnchoredPosition: {x: 98, y: 381}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1288116604
@@ -7475,7 +7481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The Dream of Aro?
+  m_text: The oddisey
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e9b68646f5736e24abdebddbb132dfc8, type: 2}
   m_sharedMaterial: {fileID: 21990798738789588, guid: e9b68646f5736e24abdebddbb132dfc8,
@@ -7545,10 +7551,10 @@ MonoBehaviour:
   m_margin: {x: -136.5058, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1288116604}
-    characterCount: 17
+    characterCount: 11
     spriteCount: 0
-    spaceCount: 3
-    wordCount: 4
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -13668,7 +13674,7 @@ Tilemap:
   - first: {x: 2, y: 5, z: 0}
     second:
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -13677,7 +13683,7 @@ Tilemap:
   - first: {x: 3, y: 5, z: 0}
     second:
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -15469,22 +15475,22 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6d17ee9709be30348aa0ca48a7399155, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: 21300028, guid: 0d044da529c8111429a6c58259790cff, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 70
     m_Data: {fileID: 21300036, guid: 0d044da529c8111429a6c58259790cff, type: 3}
   - m_RefCount: 781
     m_Data: {fileID: 21300040, guid: 0d044da529c8111429a6c58259790cff, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300030, guid: 0d044da529c8111429a6c58259790cff, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300028, guid: 0d044da529c8111429a6c58259790cff, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300316, guid: 0d044da529c8111429a6c58259790cff, type: 3}
   - m_RefCount: 2
@@ -15641,7 +15647,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bf4d62d84be6e684fb592ffe662954d6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd6fd5539da0c904080aab392dd5a5e7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -15775,7 +15781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216, y: 86}
+  m_AnchoredPosition: {x: -452, y: 155}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1723015505
@@ -16002,5 +16008,30 @@ PrefabInstance:
       propertyPath: fadeWait
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: _player
+      value: 
+      objectReference: {fileID: 1084111382}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: playerNewPosition.x
+      value: -9.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: playerNewPosition.y
+      value: 4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: introScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114078728634852228, guid: 22d058c0105bfc3409b9e0f44a5a6894,
+        type: 3}
+      propertyPath: _thePlayer
+      value: 
+      objectReference: {fileID: 1084111382}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22d058c0105bfc3409b9e0f44a5a6894, type: 3}

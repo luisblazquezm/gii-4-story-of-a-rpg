@@ -26,21 +26,25 @@ public class Teleport : MonoBehaviour
     void Start()
     {
         _cam = Camera.main.GetComponent<CameraMovement>();
-        _gameGeneralAudioSource = Camera.main.GetComponent<AudioSource>();
+        _gameGeneralAudioSource = GameObject.Find("Music").GetComponent<AudioSource>();
     }
     
     // Create an event
     IEnumerator OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Someone entered: " + other.name);
+        
         fadeIn();
         
         yield return new WaitForSeconds(fadeTime);
         
-        if (other.CompareTag("Player"))
+        if (other.name.Equals("Player"))
         {
             // IMPORTANT: if the room is not square , we will need 2 vectors
             // One for the amount of change to the minPosition and another for the amount
             // of maxPosition
+            
+            Debug.Log("The player teleports");
             
             // Adds the number of points or positions of the new camera change
             _cam.minPosition = cameraMinChange;
