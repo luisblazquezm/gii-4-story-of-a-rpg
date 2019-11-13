@@ -36,14 +36,12 @@ public class SceneTransitionManagement : MonoBehaviour
         }
         else
         {
-            Debug.Log("Aqui estamos");
+            Debug.Log("Entered in Zone 1 or Zone 2");
             GameObject.Find("Player").transform.position = playerNewPosition;
             GameObject.Find("Main Camera").transform.position = playerNewPosition;
             StartCoroutine(FadeCoroutine());
         }
         
-        Debug.Log("JAJAJAJA: " + SceneManager.GetActiveScene().name );
-
     }
 
     public IEnumerator FadeCoroutine()
