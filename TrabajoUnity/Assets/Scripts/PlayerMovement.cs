@@ -148,10 +148,8 @@ public class PlayerMovement : MonoBehaviour
                                    _animator.GetFloat("moveY"));
         
         // If it´s thor´s hammer we will play the animation to throw it back and forth
-        
         if (playerInventory.currentWeaponID == 1)
         {
-            Debug.Log("jeje");
             StartCoroutine(ChangeAnim(temp, GameObject.Find("Mjolnir")));
             ThrowableObject projectile = Instantiate(this.projectiles[playerInventory.currentWeaponID], transform.position, Quaternion.identity).GetComponent<ThrowableObject>();
             projectile.GetComponent<SpriteRenderer>().enabled = false;

@@ -17,5 +17,6 @@ public class CoinTextManager : MonoBehaviour
     public void UpdateCoinCount()
     {
         coinDisplay.text = "" + playerInventory.coins;
+        Debug.Log("En COINTEXT: " + coinDisplay.text);
     }
 }

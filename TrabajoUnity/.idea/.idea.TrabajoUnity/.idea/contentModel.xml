@@ -40,16 +40,6 @@
           <e p="ThrowableObject.cs" t="Include" />
           <e p="VectorValue.cs" t="Include" />
         </e>
-        <e p="Sprites" t="Include">
-          <e p="LPC_weapons_pack" t="Include">
-            <e p="readme.txt" t="Include" />
-          </e>
-          <e p="Others" t="Include">
-            <e p="FreePixelGear" t="Include">
-              <e p="readme.txt" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
