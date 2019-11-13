@@ -124947,6 +124947,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dc5efce5c0d37c64a87e9e681905e5af,
+        type: 3}
+    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5638383659356397898, guid: 596444effaa6c274294864942a76daba,
         type: 3}
       propertyPath: m_IsActive
@@ -125116,22 +125132,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 87.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: dc5efce5c0d37c64a87e9e681905e5af,
-        type: 3}
-    - target: {fileID: 5638383660768675620, guid: 596444effaa6c274294864942a76daba,
-        type: 3}
-      propertyPath: m_Text
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
