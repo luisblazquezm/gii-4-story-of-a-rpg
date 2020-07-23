@@ -1,5 +1,11 @@
 # story of a rpg
 
+![Language](https://img.shields.io/badge/language-spanish-red)
+![Keyword1](https://img.shields.io/badge/-videogame-brightgreen)
+![Keyword2](https://img.shields.io/badge/-rpg-important)
+![Keyword3](https://img.shields.io/badge/-unity-blue)
+![Keyword4](https://img.shields.io/badge/-sprites-blueviolet)
+
 ## Description
 
 Project based on a RPG videogame in 2D using Unity environmentfor the subject "Animación Digital" in the Computer Engineering Degree.
