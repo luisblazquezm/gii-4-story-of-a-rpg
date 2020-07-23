@@ -35,14 +35,14 @@ This game in 2D is based on a RPG game where the player must find 3 objects in 3
 
 * **Tools and weapons**: each tool will give the player different habilites
    
-   * **ligthsaber**: a jedi´s most powerful weapon.
-   * **anduril**: the sword of Aragorn from The Lord of the Rings Saga.
-   * **mjolnir**: Thor´s famous hammer. Gives the player the power to throw it back and forth to the enemies.
+   * **ligthsaber**
+   * **sword**
+   * **hammer**
    
 * **Stats**:
 
 | Weapon | Attack | Agility | Special Power |
 | --- | --- | --- | --- |
-| `ligthsaber` | 20 (+5) | (+10) | (+15) | You can use the force to knockback your enemies |
-| `anduril` | 20 (+5) | (+10) | (+15) | Use a bow and arrows |
-| `mjolnir` | 20 (+5) | (+10) | (+15) | Throws back and forth Thor´s hammer simulating the effect of a boomerang|
+| `ligthsaber` | 20 (+5) | (+10) | (+15) | Use the force to knockback your enemies |
+| `sword` | 20 (+5) | (+10) | (+15) | Use a bow and arrows |
+| `hammer` | 20 (+5) | (+10) | (+15) | Throws back and forth the hammer simulating the effect of a boomerang |
